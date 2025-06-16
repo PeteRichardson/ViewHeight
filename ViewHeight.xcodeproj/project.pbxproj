@@ -20,7 +20,7 @@
 			remoteGlobalIDString = C11B300C2E007AC60056662E;
 			remoteInfo = ViewHeight;
 		};
-		C11B30262E007AC70056662E /* PBXContainerItemProxy */ = {
+		C1FA99BA2E008E21002388AA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C11B30052E007AC60056662E /* Project object */;
 			proxyType = 1;
@@ -34,11 +34,25 @@
 		C11B301B2E007AC70056662E /* ViewHeightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewHeightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11B30252E007AC70056662E /* ViewHeightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewHeightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11B30382E00804C0056662E /* Rapunzel.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rapunzel.txt; sourceTree = "<group>"; };
+		C1A628262E00939800C90CA3 /* ViewHeight.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = ViewHeight.xctestplan; path = ../ViewHeight.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C11B30452E0089910056662E /* Exceptions for "ViewHeight" folder in "ViewHeightTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				TextModel.swift,
+			);
+			target = C11B301A2E007AC70056662E /* ViewHeightTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C11B300F2E007AC60056662E /* ViewHeight */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C11B30452E0089910056662E /* Exceptions for "ViewHeight" folder in "ViewHeightTests" target */,
+			);
 			path = ViewHeight;
 			sourceTree = "<group>";
 		};
@@ -82,6 +96,7 @@
 		C11B30042E007AC60056662E = {
 			isa = PBXGroup;
 			children = (
+				C1A628262E00939800C90CA3 /* ViewHeight.xctestplan */,
 				C11B300F2E007AC60056662E /* ViewHeight */,
 				C11B301E2E007AC70056662E /* ViewHeightTests */,
 				C11B30282E007AC70056662E /* ViewHeightUITests */,
@@ -159,7 +174,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				C11B30272E007AC70056662E /* PBXTargetDependency */,
+				C1FA99BB2E008E21002388AA /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				C11B30282E007AC70056662E /* ViewHeightUITests */,
@@ -272,10 +287,10 @@
 			target = C11B300C2E007AC60056662E /* ViewHeight */;
 			targetProxy = C11B301C2E007AC70056662E /* PBXContainerItemProxy */;
 		};
-		C11B30272E007AC70056662E /* PBXTargetDependency */ = {
+		C1FA99BB2E008E21002388AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C11B300C2E007AC60056662E /* ViewHeight */;
-			targetProxy = C11B30262E007AC70056662E /* PBXContainerItemProxy */;
+			targetProxy = C1FA99BA2E008E21002388AA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -500,6 +515,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.peterichardson.ViewHeightUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = ViewHeight;
@@ -516,6 +532,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.peterichardson.ViewHeightUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = ViewHeight;
