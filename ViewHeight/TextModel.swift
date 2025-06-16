@@ -7,11 +7,16 @@
 
 import SwiftUI
 @MainActor
-final class TextModel: ObservableObject {
-    @Published var text: String = ""
+public final class TextModel: ObservableObject {
+    @Published var lines: [String] = []
+    public var resourceName: String
     
-    init(resourceName: String = "Rapunzel") {
+    public init(resourceName: String = "Rapunzel") {
+        self.resourceName = resourceName
         load(resourceName: resourceName)
+        #if DEBUG
+            print("TextModel initialized: \(resourceName).txt, \(lines.count) lines")
+        #endif
     }
     
     
@@ -21,9 +26,9 @@ final class TextModel: ObservableObject {
         guard let url = Bundle.main.url(forResource: resourceName, withExtension: "txt"),
               let data = try? Data(contentsOf: url),
               let str  = String(data: data, encoding: .utf8) else {
-            text = "Could not load embedded text from \(resourceName).txt (file may not exist) in bundle."
+            self.lines = ["Could not load embedded text from \(resourceName).txt (file may not exist) in bundle."]
             return
         }
-        text = str
+        self.lines = str.components(separatedBy: .newlines)
     }
 }
