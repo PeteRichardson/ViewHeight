@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    
+    @State private var model = TextModel()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
+        TextEditor(text: $model.text)
         .padding()
     }
 }
