@@ -33,7 +33,7 @@ public final class TextModel: ObservableObject {
     /// - Parameter resourceName: basename of a bundled .txt file
     @MainActor
     public func load(resourceName: String) async {
-        Self.logger.debug("Loading text (with fake 3s delay)")
+        Self.logger.debug("Loading text (with artificial 0.75s delay)")
         do {
             try await Task.sleep(nanoseconds: 750_000_000)  // 0.75s
         } catch {
