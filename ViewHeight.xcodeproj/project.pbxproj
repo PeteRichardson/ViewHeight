@@ -10,6 +10,7 @@
 		C11B30392E00804C0056662E /* Rapunzel.txt in Resources */ = {isa = PBXBuildFile; fileRef = C11B30382E00804C0056662E /* Rapunzel.txt */; };
 		C11B303A2E00804C0056662E /* Rapunzel.txt in Resources */ = {isa = PBXBuildFile; fileRef = C11B30382E00804C0056662E /* Rapunzel.txt */; };
 		C11B303B2E00804C0056662E /* Rapunzel.txt in Resources */ = {isa = PBXBuildFile; fileRef = C11B30382E00804C0056662E /* Rapunzel.txt */; };
+		C1CE22262E01C101004978DC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C1CE22242E01C0FB004978DC /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		C11B30252E007AC70056662E /* ViewHeightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewHeightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11B30382E00804C0056662E /* Rapunzel.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rapunzel.txt; sourceTree = "<group>"; };
 		C1A628262E00939800C90CA3 /* ViewHeight.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = ViewHeight.xctestplan; path = ../ViewHeight.xctestplan; sourceTree = "<group>"; };
+		C1CE22242E01C0FB004978DC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -102,6 +104,7 @@
 				C11B30282E007AC70056662E /* ViewHeightUITests */,
 				C11B300E2E007AC60056662E /* Products */,
 				C11B30382E00804C0056662E /* Rapunzel.txt */,
+				C1CE22242E01C0FB004978DC /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1CE22262E01C101004978DC /* README.md in Resources */,
 				C11B303B2E00804C0056662E /* Rapunzel.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
