@@ -6,17 +6,30 @@
 //
 
 import SwiftUI
+import Logging
 
 struct ContentView: View {
+    private static let logger = Logger(label: "ContentView")
 
-    @State private var model = TextModel()
+    @StateObject private var model = TextModel()
     @State var scrollPosition = ScrollPosition(edge: .top)
     
     var body: some View {
-            TextView(model: $model, scrollPosition: $scrollPosition)
-                .navigationTitle($model.resourceName)
+        Group {
+            switch model.loadState {
+            case .idle, .loading, .failed:
+                TextLoadingIndicator(model: model)
+            case .loaded:
+                TextView(model: model, scrollPosition: $scrollPosition)
                 .frame(maxWidth: .infinity, alignment: .leading)
-
+           }
+                
+        }
+        .navigationTitle(model.resourceName)
+        .onReceive(model.$loadState.removeDuplicates()) { newValue in
+            Self.logger.debug("loadState → \(newValue)")
+        }
+        .task { await model.load(resourceName: model.resourceName) }
     }
 }
 

@@ -22,7 +22,7 @@ public struct TextView: View {
         }
     }
 
-    @Binding public var model: TextModel
+    @ObservedObject public var model: TextModel
     @Binding var scrollPosition: ScrollPosition
 
     public var body: some View {
@@ -43,12 +43,11 @@ public struct TextView: View {
                 
             }
             .frame(maxWidth: .infinity, alignment: .topLeading)
-
     }
 }
 
 #Preview {
-    @Previewable @State var model = TextModel()
+    @Previewable @StateObject var model = TextModel()
     @Previewable @State var scrollPosition: ScrollPosition = .init()
-    TextView(model: $model, scrollPosition: $scrollPosition)
+    TextView(model: model, scrollPosition: $scrollPosition)
 }

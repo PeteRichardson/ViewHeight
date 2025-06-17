@@ -6,14 +6,27 @@
 //
 
 import SwiftUI
+import Logging
 
 final class TitleModel: ObservableObject {
-    @Published var title: String = "View Height"
+    var title: String = "View Height"
 }
 
 @main
 struct ViewHeightApp: App {
+    
     @StateObject private var titleModel = TitleModel()
+    
+    init() {
+        LoggingSystem.bootstrap { label in
+            var handler = StreamLogHandler.standardOutput(label: label)
+            #if DEBUG
+            handler.logLevel = .debug
+            #endif
+            return handler
+        }
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
